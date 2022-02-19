@@ -744,11 +744,12 @@ a[target]::after {
   display: flex;
   justify-content: center;
   position: sticky;
+  overflow: hidden;
 }
 
 .tab-container {
-    width: 374px;
-    min-height: 10px;
+    width: 500px;
+    min-height: 10px;   
 }
 
 .tab-contents {
