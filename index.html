@@ -1,476 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Are you looking to hire a junior developer? Take a look at my portfolio which showcases recent projects I have been working on and a downloadable CV. Built using BootStrap, check out my experience, qualifications & skills. I look forward to hearing from you"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Georgi Dimov | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-      type="text/css"
-    />
-    <!-- Fav icon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16" />
-    <link rel="shortcut icon" type="img/png" href="/assets/images/favicon.png">
+<body>
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+    <em>Toggle Dark Mode</em>
+  </div>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </header>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/stylesec.css" />
-
-
-    <title>Georgi Dimov | Junior Full Stack Developer</title>
-  </head>
-
-  <body>
-       <div id="particles-js"></div> 
-       <div class="count-particles"><span class="js-count-particles"></span> particles </div>
-       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <header id="land">
-      <!-- Navbar Starts -->
-
-      <nav
-        class="navbar navbar-light navbar-expand-lg nav mb-auto fixed-top dark-navbar"
-      >
-        <div class="container">
-          <!-- Navbar Brand -->
-          <a class="navbar-brand ml-md-2" href="#land">
-            <img
-              class="logo"
-              src="assets/images/laptop-coding.png" style="
-    width: 50px;
-"
-              alt="CodeSonia logo"
-            />
-          </a>
-
-          <!-- Navbar Collapse Function -->
-          <button
-            class="navbar-toggler second-button clearfix"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarHeader"
-            aria-controls="navbarHeader"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="animated-icon2">
-              <span></span><span></span><span></span><span></span>
-            </span>
-          </button>
-
-          <!-- Navbar Collapse Content -->
-
-          <div class="collapse navbar-collapse mr-md-3" id="navbarHeader">
-            <!-- Navbar Links -->
-            <ul class="navbar-nav ml-auto float-right text-right">
-              <li class="nav-item active">
-                <a class="nav-link hvr-underline-from-center" href="#home"
-                  >👋Home <span class="sr-only">(current home page)</span></a
-                >
-              </li>
-              <li class="nav-item dark-nav">
-                <a class="nav-link hvr-underline-from-center" href="#about"
-                  >📋About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hvr-underline-from-center" href="Skills.html"
-                  >📚Skills</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link hvr-underline-from-center" href="Projects.html"
-                  >💻Projects</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link hvr-underline-from-center" href="Contact.html"
-                  >📨Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Landing Page -->
-    <section class="container home" id="home">
-      <div class="row">
-        <!-- LEFT -->
-        <div class="col">
-
-          <!-- Name -->
-          <div class="row" style="
-    font-family: Lato;
-">
-            <div class="col">
-              <h1 class="name">Georgi Dimov</h1>
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="home-content">
+          <div class="home-text">
+            <h1>Georgi Dimov</h1>
+            <div class="text-animation">
+              <h2>I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+            </div>
+            <p>Building responsive and user-friendly websites is my passion.</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/georgi-dimov-gd/" target="_blank"><i
+                  class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/georgi-dimov-781" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100010644577540" target="_blank"><i
+                  class="fab fa-facebook"></i></a>
+            </div>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn primary-btn">View Work</a>
+              <a href="#contact" class="btn secondary-btn">Get In Touch</a>
             </div>
           </div>
-                    <!--Job Title-->
-          <div class="row">
-            <div class="col">
-              <p class="text-muted title-role" style="
-    font-family: Lato;
-">Junior Developer</p>
-            </div>
-          </div>
-
-          <!-- Animation / Welcome to my portfolio -->
-          <div class="row d-none d-lg-block">
-            <div class="col">
-              <div class="container-animation">
-                <div id="flip">
-                  <div>
-                    <div>Hey there!</div>
-                  </div>
-
-                  <div>
-                    <div>I am a Junior Developer</div>
-                  </div>
-
-                  <div>
-                    <div>Welcome to my portfolio</div>
-                  </div>
-                </div>
+          <div class="home-image">
+            <div class="image-container">
+              <!-- Profile image -->
+              <div class="profile-image">
+                <img src="462551576_556702190275464_7266405381237722220_n.jpg" alt="Georgi Dimov">
               </div>
             </div>
           </div>
-
-          <!-- Description -->
-          <div class="row d-none d-lg-block">
-            <div class="col">
-              <p class="text-muted intro-text mt-3" style="
-    font-family: Lato;
-">
-                I am a <strong>student</strong> & <strong>freelance developer</strong> and i am
-                into <strong>building</strong> websites, application, GUI and a lot more for the
-                user, and most importantly, I
-                <strong class="love"><em>love</em></strong> what I do.
-              </p>
-            </div>
-          </div>
-
-          <!-- Landing page Image (Mobile) -->
-          <div class="row d-lg-none .d-xl-block">
-                    <div id="center-about">
-                            <div id="circle-container">
-                                <div id="circle-cover-bg">  
-                                </div>
-                            </div>
-                    </div>
-          </div>
-
-             
-      
-        </div>
-
-        <!-- Right -->
-        <div class="col-8 d-none d-lg-block">
-          <!-- Landing page Image (Desktop) -->
-         <section id="club-ethos">
-                <h1 id="welcome">Hello, stranger!</h1>
-                <div id="left-about">
-                  <div class="left-about-heading">
-                    <h2>Feel free to ask   <i class="fa fa-commenting"></i></h2> <hr>
-                    <p>If you have a trouble with something or just want to ask a question, i am here to help you if i can.
-                                Use the contact form in the menu above!
-                        </p>
-                  </div>
-
-                      
-                </div>
-                   <div id="right-about">
-                       <!-- <div class="right-about-content-align"> -->
-                        <div class="right-about-heading">
-                                <h2>View my works <i class="fa fa-desktop"></i></h2> <hr>
-                                <p>You can see part of my projects in the section "Projects". There are some of freelance project and those for the University.</p>
-                              </div>
-
-                        </div>
-                    <!-- </div>   -->
-                    <div id="center-about">
-                            <div id="circle-container">
-                                <div id="circle-cover-bg">  
-                                </div>
-                            </div>
-                    </div>
-                </div>
-        </section>
-
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-
-    <section class="container about mt-4" id="about">
-      <h4 class="text-center pt-4">About</h4>
-      <hr class="block block-light" />
-
-      <!--Left about-->
-      <div class="row">
-        <!--Sonia intro-->
-        <div class="col-md-12 col-lg-6">
-          <div class="card m-3 shadow">
-            <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold;">Hi, I'm Georgi, 22 years old. Thank you for viewing my website!</h5>
-              <p class="card-text" style="
-    font-weight: bold;
-    font-size: 85%;
-
-">
-                I am a student in Plovdiv University "Paisii Hilendarski". My major is Software technology and Design.
-              </p>
-              <p style="
-    font-weight: bold;
-    font-size: 85%;
-">
-                The programming languages that i faced and learned so far were C#, Java, PHP. I have learned different CMS and Frameworks too.
-              </p>
-              <p style="
-    font-weight: bold;
-    font-size: 85%;
-">
-                In the moment i am a freelancer but i am looking forward to job opportunities!
-                <a href="Contact.html" class="get-in-touch">Get in touch, </a>and we
-                can bring your idea to life.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!--Right about-->
-        <div class="col-md-12 col-lg-6">
-          <!--Personal Detials card-->
-          <div class="card m-3 shadow about-height">
-            <div class="card-body">
-              <h5 class="card-title" style="
-    font-weight: bold;
-">Personal Details:</h5>
-              <div class="row">
-                <div class="col-sm-5">
-                  <p><strong style="
-    font-weight: bold;
-    font-size: 85%;
-">Email:</strong></p>
-                </div>
-                <div class="col-sm-7" style="
-    font-weight: bold;
-">
-                  <a href="george_kj@abv.bg" class="about-links">
-                    <p style="
-    color: black;
-">georgidimovkj781@gmail.com</p></a
-                  >
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-5">
-                  <p><strong style="
-    font-weight: bold;
-">Second Email:</strong></p>
-                </div>
-                <div class="col-sm-7" style="
-    font-weight: bold;
-    
-">
-                  <a href="george_kj@abv.bg" class="about-links">
-                    <p style="
-    color: black;
-">george_kj@abv.bg</p></a
-                  >
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-5">
-                  <p><strong style="
-    font-weight: bold;
-    font-size: 85%;
-">Location:</strong></p>
-                </div>
-                <div class="col-sm-7">
-                  <p style="
-    font-weight: bold;
-">Plovdiv, Bulgaria</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>   
-
-
-    
-
-    <!-- Footer -->
-
-    <footer class="footer" id="footer">
+    <section id="about">
       <div class="container">
-        <!-- Grid Row Title -->
-        <div class="row">
-          <div class="col-sm-12 col-md-4">
-            <p class="text-uppercase font-weight-bold h6 pt-4 step-title" style="
-    padding-top: 1rem!important;
-">
-              Credits and right
-            </p>
-
- <p style="
-    font-size: 85%;
-">© 2020 Copyright: Georgi Dimov</p>
+        <div class="section-header">
+          <h2>About Me</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Hello! I'm Georgi</h3>
+            <p>I'm a web developer with 3 years of experience building and maintaining dynamic, high-performing websites
+              (with Drupal&PHP) and applications. My expertise lies mostly in back-end development, while also
+              developing skills in front-end technologies. I focus on creating scalable, efficient, and secure solutions
+              that meet the unique needs of clients and users.</p>
+            <p>Collaboration is at the heart of my work. As a team player, I enjoy working closely with back-end
+              developers, front-end developers, designers, and other stakeholders to ensure good integration and project
+              success. I'm driven by curiosity and always eager to learn new skills, improve my craft, and embrace
+              challenges that help me grow both personally and professionally.</p>
+            <div class="hobbies-section">
+              <h3>My Hobbies</h3>
+              <div class="hobby-items">
+                <div class="hobby-item">
+                  <i class="fas fa-futbol"></i>
+                  <span>Football</span>
+                </div>
+                <div class="hobby-item">
+                  <i class="fas fa-fish"></i>
+                  <span>Fishing</span>
+                </div>
+                <div class="hobby-item">
+                  <i class="fas fa-bicycle"></i>
+                  <span>Bicycling</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <p class="text-uppercase font-weight-bold h6 pt-4 step-title" style="
-    padding-top: 1rem!important;
-">
-              Follow Me
-            </p>
-
-            <a href="https://github.com/georgi-dimov-781" target="_blank"
-              ><i class="fa fa-github"></i
-            ></a>
-
-            <a href="https://www.facebook.com/profile.php?id=100010644577540" target="_blank"
-              ><i class="fa fa-facebook-square"></i
-            ></a>
+          <div class="timeline experience">
+            <h3>Experience</h3>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2021 - 2024</div>
+              <div class="timeline-content">
+                <h4>Drupal/PHP Web Developer</h4>
+                <p>trio-group communication & marketing gmbh, Plovdiv, Bulgaria</p>
+                <ul class="timeline-details">
+                  <li>Drupal Site Building (Drupal 9/10)</li>
+                  <li>Back-end development with PHP (7.4–8.2)</li>
+                  <li>Frontend development with Twig, SCSS, JavaScript, Vue.js</li>
+                  <li>Database management with MySQL</li>
+                  <li>Core & module updates, content sync between server instances</li>
+                  <li>Version control with Git & GitLab/BitBucket</li>
+                  <li>Development with Docker (Docksal) & PHPStorm IDE</li>
+                  <li>Agile methodologies using Jira</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2022 - 2023</div>
+              <div class="timeline-content">
+                <h4>University Assistant</h4>
+                <p>University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria</p>
+                <ul class="timeline-details">
+                  <li>Teaching HTML5, CSS, and Drupal fundamentals</li>
+                  <li>Guiding students in Drupal development & best practices</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2019</div>
+              <div class="timeline-content">
+                <h4>Drupal Intern</h4>
+                <p>trio-group communication & marketing gmbh, Plovdiv, Bulgaria</p>
+                <ul class="timeline-details">
+                  <li>Introduction to Drupal 8 CMS</li>
+                  <li>Site-building exercises and training</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <p class="text-uppercase font-weight-bold h6 pt-4 step-title" style="
-    padding-top: 1rem!important;
-">
-              Download my CV
-            </p>
 
-            <p style="
-    font-size: 85%;
-">
-              Need a downloadable format of my CV? Download it here.
-              <a href="assets/CVfixfinal.pdf" target="_blank"
-                ><i class="fa fa-download"></i
-              ></a>
-            </p>
+          <div class="timeline education">
+            <h3>Education</h3>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2017 - 2021</div>
+              <div class="timeline-content">
+                <h4>Bachelor Degree in Software Technology and Design</h4>
+                <p>Plovdiv University "Paisii Hilendarski", Plovdiv, Bulgaria</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2012 - 2017</div>
+              <div class="timeline-content">
+                <h4>High School Degree</h4>
+                <p>Language High School "Hristo Botev", Kardzhali, Bulgaria</p>
+                <p>Specialization in German and English languages</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Skills</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="skills-content">
+          <div class="technical-skills">
+            <h3>Technical Skills</h3>
+            <div class="skill-bars">
+              <div class="skill">
+                <div class="skill-info">
+                  <span>Drupal</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>PHP</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>JavaScript</span>
+                  <span>50%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="50"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>HTML</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>CSS</span>
+                  <span>60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-info">
+                  <span>Twig</span>
+                  <span>70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="soft-skills">
+            <h3>Soft Skills</h3>
+            <div class="skill-circles">
+              <div class="skill-circle">
+                <div class="circle-progress" data-progress="100">
+                  <svg>
+                    <circle class="circle-bg" cx="70" cy="70" r="65"></circle>
+                    <circle class="circle-fill" cx="70" cy="70" r="65"></circle>
+                  </svg>
+                  <div class="percent">100%</div>
+                </div>
+                <span>Passionate</span>
+              </div>
+              <div class="skill-circle">
+                <div class="circle-progress" data-progress="100">
+                  <svg>
+                    <circle class="circle-bg" cx="70" cy="70" r="65"></circle>
+                    <circle class="circle-fill" cx="70" cy="70" r="65"></circle>
+                  </svg>
+                  <div class="percent">100%</div>
+                </div>
+                <span>Ambitious</span>
+              </div>
+              <div class="skill-circle">
+                <div class="circle-progress" data-progress="90">
+                  <svg>
+                    <circle class="circle-bg" cx="70" cy="70" r="65"></circle>
+                    <circle class="circle-fill" cx="70" cy="70" r="65"></circle>
+                  </svg>
+                  <div class="percent">90%</div>
+                </div>
+                <span>Team Player</span>
+              </div>
+              <div class="skill-circle">
+                <div class="circle-progress" data-progress="85">
+                  <svg>
+                    <circle class="circle-bg" cx="70" cy="70" r="65"></circle>
+                    <circle class="circle-fill" cx="70" cy="70" r="65"></circle>
+                  </svg>
+                  <div class="percent">85%</div>
+                </div>
+                <span>Fast Learner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- JavaScript-->
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>My Projects</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="app">Mobile</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 1">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Online Wallet App</h3>
+                  <p>A secure and efficient e-wallet solution for modern digital transactions</p>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/MyWallet" target="_blank"><i class="fab fa-github"></i>
+                      Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 2">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>PM Dashboard</h3>
+                  <p>A Dashboard that helps manager in their work process.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/PMDashboard" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 3">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Custom Drupal Module</h3>
+                  <p>Custom module for importing content from third party API.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/norris-import" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Vue.js Planner">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Vue.js planner</h3>
+                  <p>A planner application for university students to manage projects.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/UniProject-Planner" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="app">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 4">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Android Adressbook</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/CourseProject" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 5">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Course Academy</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/CoursesAcademy" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="other">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 5">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Paint Application</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/PaintApplication" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 6">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Movie Catalog</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/MovieCatalog-ASP.NET-" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="other">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Project 7">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>GUI Java Store</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/OnlineStore-GUI" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img src="img-placeholder.png" alt="Photo Studio">
+              <div class="project-overlay">
+                <div class="project-details">
+                  <h3>Photo Studio</h3>
+                  <p>A fun, subscription service for photo things lovers with a sign-up modal.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/georgi-dimov-781/photostudio" target="_blank"><i
+                        class="fab fa-github"></i> Repository</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
 
-       <script src="assets/javascript/app.js"></script>
-       <script src="assets/javascript/main.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Plovdiv, Bulgaria</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>georgidimov781@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Send Me a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <span class="form-error"></span>
+              </div>
+              <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!---Nav JS-->
-    <script>
-      $(document).ready(function () {
-        $(".second-button").on("click", function () {
-          $(".animated-icon2").toggleClass("open");
-        });
-      });
-      //credit to https://codepen.io/imprfcto/pen/WNNpBLp for helping me close nav item when clicked on
-      // close hamburger menu after click a
-      $(".navbar-nav li a").on("click", function () {
-        $(".animated-icon2").click();
-      });
-    </script>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Georgi Dimov. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!--Read More JS credit to https://codingartistweb.com/2020/04/read-more-read-less/-->
-    <script>
-      $(document).ready(function () {
-        $(".read").click(function () {
-          $(this).prev().toggle();
-          $(this).siblings(".dots").toggle();
-          if ($(this).text() == "read more") {
-            $(this).text("read less");
-          } else {
-            $(this).text("read more");
-          }
-        });
-      });
-    </script>
+  <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
-    <!-- Form JS credit to mentor Dick -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
 
-    <script>
-      $("#contact-form").submit(function (e) {
-        e.preventDefault();
-        $("#staticBackdrop").modal("show");
-        $("#contact-form")[0].reset();
-      });
-    </script>
-
-    <!-- Credit to this article in showing me how to implement the dark mode feature https://www.developerdrive.com/css-dark-mode/-->
-    <script>
-      $(".inner-switch").on("click", function () {
-        if ($("html").hasClass("dark")) {
-          $("html").removeClass("dark");
-          $(".inner-switch").text("OFF");
-        } else {
-          $("html").addClass("dark");
-          $(".inner-switch").text("ON");
-          // Get HTML head element
-          var head = document.getElementsByTagName("HEAD")[0];
-
-          //Credit to Stack Overflow to help solve the issue of linking my dark stylesheet for the above jascript function
-          // Create new link Element
-          var link = document.createElement("link");
-
-          // set the attributes for link element
-          link.rel = "stylesheet";
-
-          link.type = "text/css";
-
-  
-
-          // Append link element to HTML head
-          head.appendChild(link);
-        }
-      });
-    </script>
-  </body>
 </html>
