@@ -715,16 +715,25 @@ nav {
 .project-image {
   position: relative;
   overflow: hidden;
+  height: 220px; /* Fixed height for consistent card sizing */
 }
 
 .project-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the container */
+  object-position: center top; /* Position from the top */
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image img {
+/* Apply zoom effect only when hovering over the image itself, not the entire card */
+.project-image:hover img {
   transform: scale(1.1);
+}
+
+/* Prevent zoom effect when card is expanded */
+.project-card.expanded .project-image:hover img {
+  transform: none;
 }
 
 .project-overlay {
@@ -808,9 +817,20 @@ nav {
 }
 
 .project-card.expanded .project-image {
-  height: 400px;
+  height: auto;
   border-radius: 10px 0 0 10px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Light background for images with transparency */
+}
+
+.project-card.expanded .project-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .project-expanded-content {
@@ -874,7 +894,27 @@ nav {
   }
 
   .project-card.expanded .project-image {
-    height: 300px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-card.expanded .project-image img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .project-image {
+    height: 180px; /* Smaller height for mobile */
+  }
+  
+  .project-card.expanded .project-image {
+    height: 250px;
   }
 }
 
