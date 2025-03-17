@@ -203,6 +203,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, 500);
 
+  function setupProjectCard(card) {
+    const closeBtn = card.querySelector('.close-project');
+    
+    // Add click event to expand card
+    card.addEventListener('click', function(e) {
+      // Don't expand if clicking the close button
+      if (e.target.closest('.close-project')) {
+        e.stopPropagation();
+        this.classList.remove('expanded');
+        expandedCard = null;
+        return;
+      }
+
+      // If this card is already expanded, do nothing
+      if (this.classList.contains('expanded')) {
+        return;
+      }
+
+      // If another card is expanded, collapse it first
+      if (expandedCard) {
+        expandedCard.classList.remove('expanded');
+      }
+
+      // Expand this card
+      this.classList.add('expanded');
+      expandedCard = this;
+
+      // Scroll to the expanded card
+      setTimeout(() => {
+        this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    });
+
+    // Prevent event propagation for links
+    const projectLinks = card.querySelectorAll('.project-links a');
+    projectLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    });
+  }
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       // Remove active class from all buttons
@@ -221,12 +263,18 @@ document.addEventListener('DOMContentLoaded', function() {
       projectCards.forEach(card => {
         if (filter === 'all' || card.getAttribute('data-category') === filter) {
           card.style.display = 'block';
+          // Reset the card state and reattach event listeners
+          card.classList.remove('expanded');
+          setupProjectCard(card);
         } else {
           card.style.display = 'none';
         }
       });
     });
   });
+
+  // Initial setup of all project cards
+  projectCards.forEach(card => setupProjectCard(card));
 
   // Handle project card click to expand
   projectCards.forEach(card => {
