@@ -886,10 +886,12 @@ nav {
 @media screen and (max-width: 992px) {
   .project-card.expanded {
     grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 0;
   }
 
   .project-card.expanded .project-image {
-    height: 300px;
+    height: auto;
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
@@ -897,7 +899,7 @@ nav {
   }
 
   .project-card.expanded .project-image img {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }
