@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the map
+  var map = L.map('map', {
+    center: [42.1354, 24.7453],
+    zoom: 13,
+    zoomControl: false
+  });
+
+  L.control.zoom({
+    position: 'topright'
+  }).addTo(map);
+
+  setTimeout(function() {
+    map.invalidateSize();
+    map.setView([42.1354, 24.7453], 13, {
+      animate: true,
+      duration: 1
+    });
+  }, 400);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  var pulsingIcon = L.divIcon({
+    className: 'leaflet-pulsing-marker',
+    iconSize: [10, 10]
+  });
+
+  var marker = L.marker([42.1354, 24.7453], {icon: pulsingIcon}).addTo(map)
+    .bindPopup('Plovdiv, Bulgaria')
+    .openPopup();
   // Initialize particles.js
   particlesJS('particles-js', {
     "particles": {

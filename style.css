@@ -1228,7 +1228,7 @@ footer {
     font-size: 2rem;
   }
 
-.text-animation h2 {
+  .text-animation h2 {
     font-size: 1.2rem;
   }
 
@@ -1282,6 +1282,33 @@ footer {
 
 [data-aos="fade-left"].aos-animate {
   transform: translateX(0);
+}
+
+/* Map styles */
+.leaflet-pulsing-marker {
+  border-radius: 50%;
+  background: #4CAF50;
+}
+
+.leaflet-pulsing-marker::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background: #4CAF50;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
 }
 
 /* Contact Section */
@@ -1625,37 +1652,4 @@ footer {
   .theme-switch-wrapper {
     top: 70px;
   }
-}
-
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
-}
-
-[data-aos].aos-animate {
-  opacity: 1;
-}
-
-[data-aos="fade-up"] {
-  transform: translateY(50px);
-}
-
-[data-aos="fade-up"].aos-animate {
-  transform: translateY(0);
-}
-
-[data-aos="fade-right"] {
-  transform: translateX(-50px);
-}
-
-[data-aos="fade-right"].aos-animate {
-  transform: translateX(0);
-}
-
-[data-aos="fade-left"] {
-  transform: translateX(50px);
-}
-
-[data-aos="fade-left"].aos-animate {
-  transform: translateX(0);
 }
