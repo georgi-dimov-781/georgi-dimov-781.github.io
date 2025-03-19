@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize the map
   var map = L.map('map', {
     center: [42.1354, 24.7453],
-    zoom: 13,
+    zoom: 5,
     zoomControl: false
   });
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setTimeout(function() {
     map.invalidateSize();
-    map.setView([42.1354, 24.7453], 13, {
+    map.setView([42.1354, 24.7453], 5, {
       animate: true,
       duration: 1
     });
