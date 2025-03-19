@@ -327,6 +327,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create unique descriptions for each project
     switch (projectName) {
+      case 'Fishing Website':
+        projectDescription = 'A web-based platform for fishing enthusiasts to discover fishing spots, explore gear options, and share experiences with the community. The website provides spot information, comments while also featuring a gear catalog.';
+        techStack = `
+          <span class="project-tech">React</span>
+          <span class="project-tech">SCSS with BEM methodology</span>
+          <span class="project-tech">React Context API</span>
+          <span class="project-tech">React Router v6</span>
+          <span class="project-tech">Axios</span>
+          <span class="project-tech">TypeScript</span>
+        `;
+        break;
       case 'Online Wallet App':
         projectDescription = 'A web-based e-wallet application designed for seamless online shopping. It integrates user authentication, product management, a shopping cart, and admin functionalities to enhance the user experience.';
         techStack = `
