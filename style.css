@@ -957,7 +957,6 @@ nav {
   box-shadow: var(--shadow);
 }
 
-
 .social-links {
   display: flex;
   gap: 15px;
@@ -1039,7 +1038,6 @@ footer {
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Scroll To Top */
 .scroll-to-top {
   position: fixed;
@@ -1091,7 +1089,6 @@ footer {
 }
 
 @keyframes blink {
-
   0%,
   100% {
     opacity: 1;
@@ -1216,7 +1213,6 @@ footer {
   .timeline-item {
     padding-left: 30px;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -1442,7 +1438,6 @@ footer {
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Scroll To Top */
 .scroll-to-top {
   position: fixed;
@@ -1494,7 +1489,6 @@ footer {
 }
 
 @keyframes blink {
-
   0%,
   100% {
     opacity: 1;
@@ -1619,7 +1613,6 @@ footer {
   .timeline-item {
     padding-left: 30px;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -1652,4 +1645,34 @@ footer {
   .theme-switch-wrapper {
     top: 70px;
   }
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pagination-btn {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+  box-shadow: var(--shadow);
+}
+
+.pagination-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.pagination-btn.active {
+  background-color: var(--primary-color);
+  color: white;
 }

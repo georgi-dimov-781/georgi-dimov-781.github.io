@@ -215,65 +215,102 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Filter projects
   const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectsGrid = document.querySelector('.projects-grid');
   const projectCards = document.querySelectorAll('.project-card');
   let expandedCard = null;
+  let currentFilter = 'all';
+  
+  // Pagination variables
+  const projectsPerPage = 6;
+  let currentPage = 1;
+  
+  // Create pagination container
+  const paginationContainer = document.createElement('div');
+  paginationContainer.className = 'pagination-container';
+  projectsGrid.parentNode.insertBefore(paginationContainer, projectsGrid.nextSibling);
 
-  // Initial animation for projects
-  projectCards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-  });
-
-  // Animate cards on load
-  setTimeout(() => {
-    projectCards.forEach((card, index) => {
-      setTimeout(() => {
-        card.style.transition = 'all 0.5s ease';
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      }, index * 100);
+  // Initialize pagination
+  function initPagination() {
+    updatePagination();
+    displayProjects();
+  }
+  
+  // Update pagination based on current filter
+  function updatePagination() {
+    const filteredCards = Array.from(projectCards).filter(card => {
+      return currentFilter === 'all' || card.dataset.category === currentFilter;
     });
-  }, 500);
-
-  function setupProjectCard(card) {
-    const closeBtn = card.querySelector('.close-project');
     
-    // Add click event to expand card
-    card.addEventListener('click', function(e) {
-      // Don't expand if clicking the close button
-      if (e.target.closest('.close-project')) {
-        e.stopPropagation();
-        this.classList.remove('expanded');
-        expandedCard = null;
-        return;
-      }
-
-      // If this card is already expanded, do nothing
-      if (this.classList.contains('expanded')) {
-        return;
-      }
-
-      // If another card is expanded, collapse it first
-      if (expandedCard) {
-        expandedCard.classList.remove('expanded');
-      }
-
-      // Expand this card
-      this.classList.add('expanded');
-      expandedCard = this;
-
-      // Scroll to the expanded card
-      setTimeout(() => {
-        this.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 300);
-    });
-
-    // Prevent event propagation for links
-    const projectLinks = card.querySelectorAll('.project-links a');
-    projectLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.stopPropagation();
+    const totalPages = Math.ceil(filteredCards.length / projectsPerPage);
+    paginationContainer.innerHTML = '';
+    
+    if (totalPages <= 1) {
+      return;
+    }
+    
+    // Create previous button
+    if (currentPage > 1) {
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'pagination-btn';
+      prevBtn.textContent = 'Prev';
+      prevBtn.addEventListener('click', () => {
+        currentPage--;
+        displayProjects();
+        updatePagination();
       });
+      paginationContainer.appendChild(prevBtn);
+    }
+    
+    // Create page number buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const pageBtn = document.createElement('button');
+      pageBtn.className = 'pagination-btn' + (i === currentPage ? ' active' : '');
+      pageBtn.textContent = i;
+      pageBtn.addEventListener('click', () => {
+        currentPage = i;
+        displayProjects();
+        updatePagination();
+      });
+      paginationContainer.appendChild(pageBtn);
+    }
+    
+    // Create next button
+    if (currentPage < totalPages) {
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'pagination-btn';
+      nextBtn.textContent = 'Next';
+      nextBtn.addEventListener('click', () => {
+        currentPage++;
+        displayProjects();
+        updatePagination();
+      });
+      paginationContainer.appendChild(nextBtn);
+    }
+  }
+  
+  // Display projects based on current filter and page
+  function displayProjects() {
+    // If there's an expanded card, collapse it
+    if (expandedCard) {
+      expandedCard.classList.remove('expanded');
+      expandedCard = null;
+    }
+    
+    const filteredCards = Array.from(projectCards).filter(card => {
+      return currentFilter === 'all' || card.dataset.category === currentFilter;
+    });
+    
+    const startIndex = (currentPage - 1) * projectsPerPage;
+    const endIndex = startIndex + projectsPerPage;
+    
+    projectCards.forEach(card => {
+      card.style.display = 'none';
+    });
+    
+    filteredCards.forEach((card, index) => {
+      if (index >= startIndex && index < endIndex) {
+        card.style.display = '';
+      }
     });
   }
 
@@ -281,34 +318,23 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', function() {
       // Remove active class from all buttons
       filterBtns.forEach(btn => btn.classList.remove('active'));
-      // Add active class to current button
+      // Add active class to clicked button
       this.classList.add('active');
-
-      // If a card is expanded, collapse it first
-      if (expandedCard) {
-        expandedCard.classList.remove('expanded');
-        expandedCard = null;
-      }
-
-      const filter = this.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = 'block';
-          // Reset the card state and reattach event listeners
-          card.classList.remove('expanded');
-          setupProjectCard(card);
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      
+      // Get filter value
+      currentFilter = this.getAttribute('data-filter');
+      currentPage = 1;
+      
+      // Update pagination and display projects
+      updatePagination();
+      displayProjects();
     });
   });
 
+  // Initial setup
+  initPagination();
+  
   // Initial setup of all project cards
-  projectCards.forEach(card => setupProjectCard(card));
-
-  // Handle project card click to expand
   projectCards.forEach(card => {
     // Add close button to each card
     const closeBtn = document.createElement('div');
