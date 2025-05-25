@@ -353,6 +353,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create unique descriptions for each project
     switch (projectName) {
+      case 'Weatheryx':
+        projectDescription = 'A web application that provides real-time weather information with an elegant, user-friendly interface. Weatheryx offers detailed current conditions, forecasts, and severe weather alerts for any location worldwide. The app features interactive charts, local time displays with day/night indication, and comprehensive sun information. Users can search for locations, save their recent searches, and quickly toggle between temperature units.';
+        techStack = `
+          <span class="project-tech">React</span>
+          <span class="project-tech">TypeScript</span>
+          <span class="project-tech">Chart.js</span>
+          <span class="project-tech">OpenWeatherMap API</span>
+          <span class="project-tech">CSS with modern animations</span>
+          <span class="project-tech">Vite</span>
+        `;
+        break;
       case 'Fishing Website':
         projectDescription = 'A web-based platform for fishing enthusiasts to discover fishing spots, explore gear options, and share experiences with the community. The website provides spot information, comments while also featuring a gear catalog.';
         techStack = `
